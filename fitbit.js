@@ -1,3 +1,9 @@
+// Author: Tiim
+// https://github.com/Tiim/Fitbit-Obsidian-Templater-Script/
+//
+// If you like this script, please consider buying me a coffee: 
+// https://www.buymeacoffee.com/Tiim
+
 const path = require("path");
 const fs = require("fs").promises;
 
