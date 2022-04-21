@@ -7,6 +7,7 @@ const fs = require("fs").promises;
 ## What does it do?
 
 Insert a list of your fitbit activities into an obsidian note.
+If you like this script, please consider [buying me a coffee](https://www.buymeacoffee.com/Tiim).
 
 ## How to use:
 
@@ -23,12 +24,12 @@ Insert a list of your fitbit activities into an obsidian note.
 7. Run the templater script again, the file "fitbit.json" will be updated and your activities of the day 
   will be inserted to the note.
 */
-const DIR = path.join(app.vault.adapter.basePath, "misc") 
+const DIR = path.join(app.vault.adapter.basePath, "misc");
 const FILE = path.join(DIR, "fitbit.json");
 const LANG = "de-CH";
 
 /**
- * Format a fitbit activity item to a string. 
+ * Format a fitbit activity item to a string.
  * This function can be edited to customise how the output is formatted.
  * For a list of available properties, see https://dev.fitbit.com/build/reference/web-api/activity/get-activity-log-list#Response
  */
@@ -69,9 +70,7 @@ function toMeter(dist, unit) {
   return dist;
 }
 
-
 async function fitbit(date) {
- 
   fitbitData = await getFitbitData();
   await fitbitAuth(fitbitData);
   const start = moment(date)
